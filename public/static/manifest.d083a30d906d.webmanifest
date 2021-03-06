@@ -1,0 +1,85 @@
+{
+  "name": "Screener.in",
+  "short_name": "Screener",
+  "description": "Tool for stock analysis and research",
+  "categories": ["finance", "news"],
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "https://www.screener.in",
+  "icons": [
+    {
+      "src": "/static/img/circle-icon.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/img/circle-icon@72px.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/img/circle-icon@96px.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/img/circle-icon@144px.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/static/screenshots/home.jpg",
+      "sizes": "411x731",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/static/screenshots/stock-screen.jpg",
+      "sizes": "411x731",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/static/screenshots/company.jpg",
+      "sizes": "411x731",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/static/screenshots/price.jpg",
+      "sizes": "411x731",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/static/screenshots/profit-loss.jpg",
+      "sizes": "411x731",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/static/screenshots/balance-sheet.jpg",
+      "sizes": "411x731",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "company.png",
+      "sizes": "800x6389",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "News Feed",
+      "url": "/dash/",
+      "description": "Latest filings of your companies"
+    },
+    {
+      "name": "Search Company",
+      "url": "/home/",
+      "description": "Search a company"
+    },
+    {
+      "name": "Explore Screens",
+      "url": "/explore/",
+      "description": "Find new stock ideas using stock screens"
+    }
+  ]
+}
