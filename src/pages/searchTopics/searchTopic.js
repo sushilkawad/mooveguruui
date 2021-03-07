@@ -32,11 +32,11 @@ class SearchTopic extends Component {
           <div className="has-addon left-addon dropdown-typeahead">
             <i className="addon icon-search"></i>
             <input
-              aria-label="Search for a company"
+              aria-label="Search for a topic"
               type="search"
               autoComplete={'off'}
               spellCheck={false}
-              placeholder="Search for a company"
+              placeholder="Search for a topic"
               className="u-full-width"
               autoFocus={true}
               onChange={(e) => this.findTopic(e)}

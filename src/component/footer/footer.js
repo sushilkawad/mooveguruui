@@ -14,16 +14,18 @@ class Footer extends Component {
       <div className="footer">
         <footer id="large-footer" className="flex-row flex-space-between flex-column-tablet container no-print">
           <div className="hide-from-tablet" style={{ marginBottom: 16 }}>
-            <img src="static/img/logo-black.f44abb4998d1.svg" alt="Screener Logo" style={{ maxWidth: 120 }} className="logo" />
+            <h2>Logo</h2>
+            {/* <img src="static/img/logo-black.f44abb4998d1.svg" alt="Screener Logo" style={{ maxWidth: 120 }} className="logo" /> */}
           </div>
           <div className="show-from-tablet" style={{ padding: "0 64px 0 0" }}>
-            <img src="static/img/logo-black.f44abb4998d1.svg" alt="Screener Logo" style={{ maxWidth: 120 }} className="logo" />
-            <p className="font-size-19" style={{ fontWeight: 500 }}>Stock analysis and screening tool</p>
-            <p className="sub">Mittal Analytics Private Ltd &copy; 2009–2020
+            <h2>Logo</h2>
+            {/* <img src="static/img/logo-black.f44abb4998d1.svg" alt="Screener Logo" style={{ maxWidth: 120 }} className="logo" /> */}
+            <p className="font-size-19" style={{ fontWeight: 500 }}>Lorem ipsum dolor sit amet</p>
+            <p className="sub">xyz Private Ltd &copy; 2020–2021
               <br />
               Made with <i className="icon-heart red"></i> in India.
             </p>
-            <p className="sub font-size-13">Data provided by C-MOTS Internet Technologies Pvt Ltd</p>
+            <p className="sub font-size-13">consectetur adipiscing elit.</p>
             <p className="font-size-13"><a href="guides/terms/index.html">Terms</a> & <a href="guides/privacy/index.html">Privacy</a>.</p>
           </div>
           <div className="flex flex-wrap flex-gap-32 flex-end flex-space-between flex-grow" style={{ maxWidth: 600 }}>

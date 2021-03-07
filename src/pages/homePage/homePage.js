@@ -52,7 +52,7 @@ class HomePage extends Component {
                 <div style={{marginTop: '3%'}}>
                   <SearchTopic allTopics={topicList} selectTopic={this.selectTopic} />
                   <p className="suggestions">
-                    Or analyse:
+                    Or select:
                     {topicList.map((item, index) => {
                       if(index < 9){
                         return <a key={index} className="button" onClick={() => {this.selectTopic(item.id)}}>{item.n}</a>
