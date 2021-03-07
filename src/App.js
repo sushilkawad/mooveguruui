@@ -35,12 +35,6 @@ class App extends Component {
 // static getDerivedStateFromProps(){
 //   console.log('444')
 // }
-
-  routeChanged = (r) => {
-    this.setState({changedRoute:r});
-    console.log('mmmm', r);
-  }
-
   
   shouldComponentUpdate(props,state) {
     // console.log(state);
@@ -58,8 +52,8 @@ class App extends Component {
     console.log('enter in app');
     return ( 
       <div>
-        <Header history={history} routeChanged={changedRoute} />
-        <RoutingHolder history={history} routeChanged={this.routeChanged} />
+        {/* <Header history={history} routeChanged={changedRoute} /> */}
+        <RoutingHolder history={history} />
         <Footer history={history} />
       </div>
     )
