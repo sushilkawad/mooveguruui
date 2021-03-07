@@ -1,7 +1,8 @@
 import { GetRequest } from "../api/axiosList";
+import { apiBaseURL } from "../config/config";
 
 export const getTopicList = () => {
-  const URL = 'http://mooveguru.in/api/btopics'
+  const URL = `${apiBaseURL}/btopics`
   const header = {
     accept: 'application/json',
   };
@@ -9,7 +10,7 @@ export const getTopicList = () => {
 };
 
 export const getTopicById = (id) => {
-  const URL = `http://mooveguru.in/api/topic/${id}`
+  const URL = `${apiBaseURL}/topic/${id}`
   const header = {
     accept: 'application/json',
   };

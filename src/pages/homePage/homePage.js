@@ -25,7 +25,7 @@ class HomePage extends Component {
   }
 
   selectTopic = (id) => {
-    debugger;
+    // debugger;
     const { history } = this.props;
     history.push({pathname:'/topicDetails', search: `?id=${id}` })
     //history.push('/topicDetails');
@@ -43,18 +43,19 @@ class HomePage extends Component {
               <div className="heading-area"></div>
               <div className="flex flex-column" style={{maxWidth: 650, margin: '96px auto', minHeight: '60vh', textAlign: 'center', justifyContent: 'center', padding: 16}}>
                 <h1 style={{marginBottom: 0}}>
-                  <img className="u-max-full-width logo" src="static/img/logo-black.f44abb4998d1.svg" alt="Screener logo" />
+                  MOOVEGURU
+                  {/* <img className="u-max-full-width logo" src="static/img/logo-black.f44abb4998d1.svg" alt="Screener logo" /> */}
                 </h1>
                 <p className="bigger">
-                  Stock analysis and screening tool for investors in India.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 </p>
                 <div style={{marginTop: '3%'}}>
-                  <SearchTopic allTopics={topicList} />
+                  <SearchTopic allTopics={topicList} selectTopic={this.selectTopic} />
                   <p className="suggestions">
                     Or analyse:
                     {topicList.map((item, index) => {
                       if(index < 9){
-                        return <a className="button" onClick={() => {this.selectTopic(item.id)}}>{item.n}</a>
+                        return <a key={index} className="button" onClick={() => {this.selectTopic(item.id)}}>{item.n}</a>
                       }
                     })}
                   </p>

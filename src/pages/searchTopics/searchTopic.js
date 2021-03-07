@@ -11,7 +11,7 @@ class SearchTopic extends Component {
   }
 
   findTopic = (e) => {
-    debugger;
+    // debugger;
     let { allTopics } = this.props;
     let matchTopics = [];
     if(e.target.value) {
@@ -25,6 +25,7 @@ class SearchTopic extends Component {
 
   render() {
     const { matchTopics } = this.state;
+    const { selectTopic } = this.props;
     return (
       <div className="searchTopic">
         <div className="home-search" style={{ marginBottom: '1.5rem' }}>
@@ -42,7 +43,7 @@ class SearchTopic extends Component {
               data-company-search="true" />
             <ul 
               className={`dropdown-content ${matchTopics.length > 0 ? 'visible' : ''}`}>
-              {matchTopics.map(item => (<li key={item.id}>{item.n}</li>))}
+              {matchTopics.map(item => (<li onClick={() => selectTopic(item.id)} key={item.id}>{item.n}</li>))}
             </ul>
           </div>
         </div>

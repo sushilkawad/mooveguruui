@@ -58,7 +58,7 @@ class Footer extends Component {
                     </li>
                 </ul>
             </div>
-            <div className="flex-grow">
+            {/* <div className="flex-grow">
               <div className="title">Theme</div>
                 <ul className="items">
                   <li>
@@ -80,7 +80,7 @@ class Footer extends Component {
                     </button>
                   </li>
                 </ul>
-              </div>
+              </div> */}
             </div>
             <div className="hide-from-tablet">
               <hr />
