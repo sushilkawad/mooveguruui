@@ -23,20 +23,21 @@ class Header extends Component {
     // }
 
     shouldComponentUpdate(props, state){
+      console.log('aaaaasdasd');
       if(state.changedRoute != this.state.changedRoute || state.showDetailsHeader != this.state.showDetailsHeader){
         return true;
       }
       return false;
   }
     
-    // componentDidMount(){  
-    //     console.log('ccc')
-    // }
+    componentDidMount(){  
+        console.log('ccc')
+    }
     
-    // componentWillReceiveProps(){  
-    //     console.log('aaa')
-    //     console.log('aaa',this.props);
-    // }
+    componentWillReceiveProps(){  
+        console.log('aaa')
+        console.log('aaa',this.props);
+    }
     
     static getDerivedStateFromProps(props){
       console.log('ggggg',props.routeChanged)
@@ -47,7 +48,7 @@ class Header extends Component {
     }
 
     render() {
-      const { history } = this.props;
+      const { history, routeChangedFunction } = this.props;
       const { showDetailsHeader } = this.state;
       console.log('rrrr',this.state);
       return (
@@ -63,8 +64,8 @@ class Header extends Component {
                       </a>
 
                       <div className="show-from-desktop desktop-links" style={{marginLeft: 48}}>
-                        {/* <a style={{cursor: 'pointer'}} onClick={this.goToHome}> Home </a> */}
-                        <Link to="/"> Home </Link>
+                        {/* <a style={{cursor: 'pointer'}} onClick={() => {history.push({pathname:'/'});routeChangedFunction('home')}}> Home </a> */}
+                        <Link onClick={() => routeChangedFunction('home')} to="/"> Home </Link>
                         {/* <a href="explore/index.html"> Screens </a> */}
                         {/* <div className="dropdown-menu">
                           <button className="button-plain">Tools</button>
@@ -126,14 +127,15 @@ class Header extends Component {
                           </div>
                       </div>
                       <div className="flex flex-gap-8 show-from-desktop" style={{margin: 4}}>
-                      <Link className="button account" to="/login"> <i className="icon-user-line blue-icon"></i> Login </Link>
-                          <a className="button account" onClick={() => history.push({pathname:'/login'})}>
+                      <Link className="button account" onClick={() => routeChangedFunction('login')} to="/login"> <i className="icon-user-line blue-icon"></i> Login </Link>
+                          {/* <a className="button account" onClick={() => history.push({pathname:'/login'})}>
                               <i className="icon-user-line blue-icon"></i>
                               Login aa
-                          </a>
-                          <a className="button account button-secondary" href="register/index.html">
+                            </a> */}
+                            <Link className="button account button-secondary" onClick={() => routeChangedFunction('registration')} to="/registration"> Registration </Link>
+                          {/* <a className="button account button-secondary" href="register/index.html">
                               Get free account
-                          </a>
+                          </a> */}
                       </div>
                     </div>
                   </div>

@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import HomePage from "../pages/homePage";
 import Login from "../pages/login";
+import Registration from "../pages/registration";
 import TopicDetails from "../pages/topicDetails";
 
 import Header from '../component/header';
@@ -37,7 +38,6 @@ class RoutingHolder extends React.Component {
 
 routeChanged = (r) => {
   this.setState({changedRoute:r});
-  console.log('mmmm', r);
 }
 
 shouldComponentUpdate(props,state) {
@@ -70,17 +70,23 @@ shouldComponentUpdate(props,state) {
         className="routing-holder"
       >
         <BrowserRouter history={history} routeChanged={routeChanged}>
-        <Header history={history} routeChanged={changedRoute} />
+        <Header history={history} routeChanged={changedRoute} routeChangedFunction={this.routeChanged} />
           <Switch>
             <PrivateRoute
               path="/topicDetails"
-              component={() => <TopicDetails history={history} routeChanged={this.routeChanged} />}
+              component={() => <TopicDetails history={history} routeChangedFunction={this.routeChanged} />}
               // component={withRouter(TopicDetails)}
               />
               <PrivateRoute
                 path="/login"
                 exact
                 component={() => <Login history={history} />}
+                // component={Login}
+              />
+              <PrivateRoute
+                path="/registration"
+                exact
+                component={() => <Registration history={history} />}
                 // component={Login}
               />
             <PrivateRoute

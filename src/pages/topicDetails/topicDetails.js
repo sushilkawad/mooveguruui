@@ -15,8 +15,8 @@ class TopicDetails extends Component {
   componentDidMount(){
     console.log('propsss routeChanged', this.props);
     // (this.props.data2 || {}).data1();
-    const {routeChanged} = this.props;
-    routeChanged('topicDetails');
+    const {routeChangedFunction} = this.props;
+    routeChangedFunction('topicDetails');
     const url = window.location.search;
     if(url){
       const queryparams = url.split('?')[1];
