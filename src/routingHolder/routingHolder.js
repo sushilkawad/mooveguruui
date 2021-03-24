@@ -53,7 +53,7 @@ shouldComponentUpdate(props,state) {
 
   render() {
     console.log('enter in react router',this.props)
-    const { history, routeChanged } = this.props;
+    const { history } = this.props;
     const { changedRoute } = this.state;
     const PrivateRoute = ({ component: Component, ...rest }) => (
       <Route
@@ -69,7 +69,7 @@ shouldComponentUpdate(props,state) {
       <div
         className="routing-holder"
       >
-        <BrowserRouter history={history} routeChanged={routeChanged}>
+        <BrowserRouter history={history} >
         <Header history={history} routeChanged={changedRoute} routeChangedFunction={this.routeChanged} />
           <Switch>
             <PrivateRoute

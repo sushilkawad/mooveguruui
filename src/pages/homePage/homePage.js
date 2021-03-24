@@ -1,23 +1,22 @@
 import React, { Component } from "react";
 import "./homePage.css";
+import { connect } from 'react-redux';
 import logo from '../../logo.svg';
 import SearchTopic from '../searchTopics/searchTopic';
 import Header from "../../component/header/header";
 import Footer from "../../component/footer/footer";
 import { getTopicList } from "../../constants/commonFunction";
+import loadingActions from "../../redux/actions";
 
 
 class HomePage extends Component {
   constructor(props) {
       super(props);
-      this.state = {
-        topicList: [],
-      }
   }
 
   componentDidMount() {
-    getTopicList().then((response) => {
-      this.setState({topicList: response.data});
+    getTopicList().then((response) => {      
+      loadingActions.getListOfTopics(response.data);
     })
     .catch((error) => {
       console.log('Error:',error);
@@ -32,7 +31,7 @@ class HomePage extends Component {
   }
 
   render() {
-      const  { topicList } = this.state;
+      const  { topicList } = this.props;
 
       const { history } = this.props;
 
@@ -67,5 +66,7 @@ class HomePage extends Component {
     );
   } 
 }
-
-export default HomePage;
+const mapStateToProps = (state) => ({
+    topicList: state.utilsReducer.listOfTopics
+});
+export default connect(mapStateToProps) (HomePage);

@@ -179,9 +179,6 @@ class Header extends Component {
                 <a href="#videos">Videos</a>
                 <a href="#questions">Questions</a>
                 <a href="#conclusion">Conclusion</a>
-                <a href="#ratios">Ratios</a>
-                <a href="#shareholding">Investors</a>
-                <a href="#documents">Documents</a>
               </div>
                     </div>
                   </div>
